@@ -20,7 +20,7 @@ jobs:
           node-version: 16.15.0
           run_install: true
       - run: |
-          node scraping/index.js
+          npm run scrape
           git config user.name hero-cards-bot
           git add -A
           git commit -m "[bot] Update Hero Cards Database"
