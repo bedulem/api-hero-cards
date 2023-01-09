@@ -22,7 +22,6 @@ jobs:
           npm install
           npm run scrape
           git config user.name hero-cards-bot
-          git add -A
-          git commit -m "[bot] Update Hero Cards Database"
+          git diff --quiet && git diff --staged --quiet || git commit -am "[bot] update Hero Cards database"
           git push origin main
   
