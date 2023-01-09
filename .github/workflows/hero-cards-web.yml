@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.15.0
-          run_install: true
+          cache: 'npm'
       - run: |
           npm run scrape
           git config user.name hero-cards-bot
