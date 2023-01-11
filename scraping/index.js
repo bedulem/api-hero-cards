@@ -72,7 +72,7 @@ async function getHeroCards() {
       .attr("src");
     heroCardsEntries.push(["imageFront", rawImageFront]);
     heroCardsEntries.push(["imageBack", rawImageBack]);
-    heroCardsEntries.push(["id", index + 1]);
+    heroCardsEntries.unshift(["id", index + 1]);
 
     heroCards.push(Object.fromEntries(heroCardsEntries));
   });
