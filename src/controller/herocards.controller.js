@@ -12,8 +12,10 @@ export const getHeroCards = (req, res) => {
 };
 
 export const getOneHeroCard = (req, res) => {
+  const { id } = req.params;
+  const result = heroCards.find((el) => el.id == id);
   try {
-    return res.send("not now");
+    return res.send(result);
   } catch (error) {
     return res.status(500).json({
       message: "Something goes wrong",
