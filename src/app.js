@@ -1,9 +1,11 @@
 import express from "express";
 import inedexRoutes from "./routes/index.routes.js";
 import heroCardsRoutes from "./routes/heroCards.routes.js";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.use(inedexRoutes);
