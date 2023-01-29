@@ -30,7 +30,8 @@ URL: https://hero-cards-production.up.railway.app/
 ## Próximas características
 
 - [x] Buscador de cartas por ID
-- [ ] Buscador de cartas por nombre, facción y otras c- [ ] aracterísticas
+- [ ] Buscador de cartas por nombre, facción y otras
+- [ ] Características
 - [ ] Guardar en la base de datos MongoDB los datos del Scraping
 - [ ] Home page y extras
 
