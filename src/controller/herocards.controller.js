@@ -12,8 +12,20 @@ export const getHeroCards = (req, res) => {
 };
 
 export const getOneHeroCard = (req, res) => {
-  const { id } = req.params;
-  const result = heroCards.find((el) => el.id == id);
+  const { findParam } = req.params;
+  const result = heroCards.find((el) => el.id == findParam);
+  try {
+    return res.send(result);
+  } catch (error) {
+    return res.status(500).json({
+      message: "Something goes wrong",
+    });
+  }
+};
+
+export const getHeroCardsByName = (req, res) => {
+  const { findParam } = req.params;
+  const result = heroCards.filter((el) => el.name.includes(findParam));
   try {
     return res.send(result);
   } catch (error) {
